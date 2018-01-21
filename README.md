@@ -57,19 +57,19 @@ curl "http://localhost:3000/hotel/list?checkin=20170812&checkout=20170913&destin
 
 ### Dynamicly loaded supplier API parser
 
-Supplier data is saved in `app/models/supplier.rb`
+Supplier data is saved via `app/models/supplier.rb`
 
 - name: API name
 - url: API entry point
 - api_parser: api specific parser file in `app/api_parsers` folder.
 
-> The file name need to be in snake_case, with extention, without path.
-> The parser call in the file need to be in CamelCase.
+> The file name need to be in snake_case, with extention, without path. eg. `supplier_1_parser.rb`
+> The parser class in the file need to be in CamelCase. It need to be a match to the file name. eg. `Supplier1Parser`
 > The parser need to be extended from BaseParser in `app/api_parser/base_parser.rb`.
-> If no parser is specified, BaseParser will be used. 
-> If parser is specificed, but cannot be found, BaseParser will be used. 
+> If no parser is specified, `BaseParser` will be used. 
+> If parser is specificed, but cannot be found, `BaseParser` will be used. 
 
-- expire_sec: data expiration in second 
+- expire_sec: data expiration in second.
 
 Druing run time, new supplier can be added to the database.
 
@@ -77,9 +77,9 @@ Its parser can be added to `app/api_parsers` folder without restaring the servic
 
 ### Cache
 - This is a generic cache implemented as key-value store in database.
-- The cache's call need to define how cache behaves. 
-- Cache data is stored  `app/models/data_record.rb`
-- Cacher interface is implemented in `app/models/data_cacher.rb` as a Singleton object
+- Cache's caller needs to define how cache behaves. 
+- Cache data is stored via `app/models/data_record.rb`.
+- Cacher interface is implemented in `app/models/data_cacher.rb` as a singleton object.
 - Cache is used for individual API calls. So the cache key is defined as `"#{self.name}-#{checkin}-#{checkout}-#{destination}-#{guests}".downcase`
 
 
