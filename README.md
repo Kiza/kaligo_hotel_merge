@@ -4,6 +4,7 @@ This is a RoR API project for task at https://gist.github.com/arnvald/0af20bdceb
 
 ## Notes
 **IMPORTANT**
+
 Development-mode class reloading is disable to make concurrency work.
 
 ```
