@@ -87,5 +87,5 @@ Its parser can be added to `app/api_parsers` folder without restaring the servic
 - Thread pool should be implemented in `app/api_parser/api_worker.rb` to avoid re-creation of thread objects. 
 - Clean up logic or key reuse logic should be implemented in `app/modles/data_cacher.rb` ro improve database utilization.
 - If merging hotel data is the bottleneck, then this result should be cached as well. 
-
+- For a highly concurrent web services, each supplier API client should be implemented as seperated service. Cache, log and database should be implemented as indvidual services as well. 
 
