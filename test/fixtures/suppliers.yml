@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: supplier1
+  url: https://api.myjson.com/bins/2tlb8
+  api_parser: supplier_1_parser.rb
+  expire_sec: 300
+  alive: true
+
+two:
+  name: supplier2
+  url: https://api.myjson.com/bins/42lok
+  api_parser: supplier_2_parser.rb
+  expire_sec: 300
+  alive: true
