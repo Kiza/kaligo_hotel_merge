@@ -22,15 +22,14 @@ config.eager_load = true # enabled to make concurrency work
 ## Get started
 - check out source code
 - run `bundle`
-- run `rake db:migrate`
-- run `rake db:setup`
+
 
 ## Run test
-
 - run `rails t`
 
 ## Start services
-
+- run `rake db:migrate`
+- run `rake db:setup`
 - run `rails s`
 
 Services will be running at `http://localhost:3000`
