@@ -55,7 +55,7 @@ curl "http://localhost:3000/hotel/list?checkin=20170812&checkout=20170913&destin
 
 ## System design
 
-### Dynamicly loaded supplier API parser*
+### Dynamicly loaded supplier API parser
 
 Supplier data is saved in `app/models/supplier.rb`
 
