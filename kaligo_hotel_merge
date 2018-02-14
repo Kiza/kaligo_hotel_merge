@@ -1,0 +1,3 @@
+#!/bin/bash
+cd '/Users/kiza/Documents/Codes/Ruby/kaligo_hotel_merge'
+rails s
